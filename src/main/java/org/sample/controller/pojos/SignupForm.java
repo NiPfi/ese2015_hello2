@@ -11,7 +11,7 @@ public class SignupForm {
     private Long id;
     private String firstName;
     private String lastName;
-    private String team;
+    private Long team;
 
 
     @NotNull
@@ -51,11 +51,11 @@ public class SignupForm {
         this.id = id;
     }
 
-	public String getTeam() {
+	public Long getTeam() {
 		return team;
 	}
 	
-	public void setTeam(String team) {
+	public void setTeam(Long team) {
 		this.team = team;
 	}
 }

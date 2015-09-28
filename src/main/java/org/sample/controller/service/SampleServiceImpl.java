@@ -3,6 +3,7 @@ package org.sample.controller.service;
 import org.sample.controller.exceptions.InvalidUserException;
 import org.sample.controller.pojos.SignupForm;
 import org.sample.model.Address;
+import org.sample.model.Team;
 import org.sample.model.User;
 import org.sample.model.dao.AddressDao;
 import org.sample.model.dao.TeamDao;
@@ -31,13 +32,13 @@ public class SampleServiceImpl implements SampleService {
 
 
         Address address = new Address();
-        address.setStreet("TestStreet-foo");
+        address.setStreet("TestStreet");
         
         User user = new User();
         user.setFirstName(signupForm.getFirstName());
         user.setEmail(signupForm.getEmail());
         user.setLastName(signupForm.getLastName());
-        user.setTeam(teamDao.findOne((long)1));
+        user.setTeam(teamDao.findOne(signupForm.getTeam()));
         user.setAddress(address);
         
         user = userDao.save(user);   // save object to DB
