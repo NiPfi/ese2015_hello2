@@ -51,11 +51,11 @@ public class TeamController {
             	teamService.createTeam(createTeam);
             	model = new ModelAndView("added");
             } catch (InvalidUserException e) {
-            	model = new ModelAndView("index");
+            	model = new ModelAndView("new-team");
             	model.addObject("page_error", e.getMessage());
             }
         } else {
-        	model = new ModelAndView("index");
+        	model = new ModelAndView("new-team");
         }   	
     	return model;
     }

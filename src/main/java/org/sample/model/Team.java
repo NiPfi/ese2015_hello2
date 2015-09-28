@@ -10,9 +10,10 @@ import javax.persistence.Id;
 public class Team {
 	@Id
     @GeneratedValue
-	Long id;
-	String name;
-	Date date;
+	private Long id;
+	private String name;
+	private Date date;
+	
 	public Long getId() {
 		return id;
 	}

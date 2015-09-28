@@ -9,6 +9,7 @@ import org.sample.model.dao.TeamDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 @Service
 public class TeamServiceImpl implements TeamService{
@@ -17,9 +18,14 @@ public class TeamServiceImpl implements TeamService{
 	
 	@Transactional
 	public CreateTeam createTeam(CreateTeam createTeam)throws InvalidUserException {
+		String teamName = createTeam.getName();
+		if (StringUtils.isEmpty(teamName)) {
+			throw new InvalidUserException("Team name has to be entered");
+		}
+		
 		
 		Team team = new Team();
-		team.setName(createTeam.getName());
+		team.setName(teamName);
 		team.setDate(new Date());
 		team = teamDao.save(team);
 		createTeam.setId(team.getId());
