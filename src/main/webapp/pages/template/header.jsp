@@ -43,19 +43,9 @@
 							<ul>
 								<li><a href="/">Welcome</a></li>
 								<li>
-									<a href="">Dropdown</a>
+									<a href="">Menu</a>
 									<ul>
 										<li><a href="/team">Add new Team</a></li>
-										<li><a href="#"></a></li>
-										<li>
-											<a href=""></a>
-											<ul>
-												<li><a href="#">Lorem ipsum dolor</a></li>
-												<li><a href="#">Phasellus consequat</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-											</ul>
-										</li>
 									</ul>
 								</li>
 							</ul>

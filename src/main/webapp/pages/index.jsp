@@ -39,11 +39,12 @@
                 <form:errors path="lastName" cssClass="help-inline" element="span"/>
             </div>
         </div>
-        <div class="control-group<c:if test="${not empty teamErrors}"> error</c:if>">
+        <div class="control-group">
             <label class="control-label" for="field-selectedTeam">Team</label>
             <div class="controls">
             	
                 <form:select path="team">
+                	<form:option value="0">None</form:option>
                   	<form:options items="${teams}" itemValue="id" itemLabel="name"/>
                 </form:select>
                 <form:errors path="team" cssClass="help-inline" element="span"/>
@@ -51,6 +52,7 @@
         </div>
         <div class="form-actions">
             <button type="submit" class="btn btn-primary">Sign up</button>
+            <button type="reset" class="btn">Reset</button>
         </div>
     </fieldset>
 </form:form>
