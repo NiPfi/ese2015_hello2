@@ -12,7 +12,7 @@
 		<td>User ID: ${User.id}</td>
 	</tr>
 	<tr>
-		<td>Name: ${User.firstName} ${User.lastName}</td>
+		<td>Name: ${User.lastName}, ${User.firstName}</td>
 	</tr>
 	<tr>
 		<td>E-Mail: ${User.email}</td>
